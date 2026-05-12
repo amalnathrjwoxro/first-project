@@ -6,7 +6,7 @@ export default function HomeHero() {
   return (
     <div className=" w-full">
       {/* ── Mobile layout (no image) ── */}
-      <div className="lg:hidden bg-black flex flex-col px-5 sm:px-8 py-10 gap-6">
+      <div className="lg:hidden bg-black flex flex-col px-5 sm:px-8 py-10 sm:py-14 md:py-18 gap-6">
         {/* Breadcrumb */}
         <div className="flex items-center gap-1.5 text-xs sm:text-sm">
           <FiHome className="text-white text-sm" />
@@ -51,19 +51,19 @@ export default function HomeHero() {
           style={{ fontWeight: 100 }}
           className="text-gray-400 text-sm sm:text-base max-w-sm leading-relaxed"
         >
-          In today's market, every business needs a website that reflects its
+          In today&apos;s market, every business needs a website that reflects its
           goals. As a website development company in India, we build sites that
           leave a lasting impression.
         </p>
       </div>
 
       {/* ── Desktop layout (with image) ── */}
-      <div className="hidden lg:block relative w-full h-[880px] overflow-hidden">
+      <div className="hidden lg:block group relative w-full h-[880px] overflow-hidden">
         <Image
           src="/images/Website.jpg"
           alt="Hero Image"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           priority
           sizes="100vw"
         />
@@ -85,13 +85,13 @@ export default function HomeHero() {
 
             <div className="flex flex-col gap-0.5 mt-2">
               <p
-                style={{ fontWeight: 100, opacity: 0.85 }}
+                style={{ fontWeight: 100, opacity: 0.80 }}
                 className="text-white text-lg"
               >
                 Bespoke website development to seamlessly foster growth.
               </p>
               <p
-                style={{ fontWeight: 100, opacity: 0.85 }}
+                style={{ fontWeight: 100, opacity: 0.80 }}
                 className="text-white text-lg"
               >
                 We put your vision online.
@@ -101,14 +101,14 @@ export default function HomeHero() {
 
           {/* Bottom: Main Heading + Description */}
           <div className="flex flex-col gap-4">
-            <h1 className="text-white text-8xl leading-tight">
+            <h1 className="text-white text-7xl leading-tight">
               Website Development
             </h1>
             <p
               style={{ fontWeight: 100, opacity: 0.75 }}
-              className="text-white text-lg max-w-lg leading-relaxed"
+              className="text-white text-lg max-w-210 leading-relaxed"
             >
-              In today's market, every business needs a website that reflects
+              In today&apos;s market, every business needs a website that reflects
               its goals. As a website development company in India, we build
               sites that leave a lasting impression.
             </p>

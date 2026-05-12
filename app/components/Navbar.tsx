@@ -1,30 +1,44 @@
 "use client";
+
 import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
+const navItems = [
+  "Who we are",
+  "What we do",
+  "Our Works",
+  "Industries",
+  "Careers",
+  "Insights",
+  "Contact us",
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full px-6 md:px-10 mt-5 sticky top-0 z-50 bg-white shadow-sm">
-      <div className="flex justify-between items-center py-4">
-
-        <div className="font-semibold text-lg">Logo</div>
+    <div className="sticky top-0 z-50 mt-5 w-full bg-white px-5 shadow-sm sm:px-6 md:px-10">
+      <div className="flex items-center justify-between py-4">
+        <div className="text-lg font-normal">Logo</div>
 
         <button
-          className="md:hidden text-2xl"
+          className="inline-flex size-10 items-center justify-center rounded-full text-2xl text-gray-900 transition-colors duration-300 hover:bg-gray-100 md:hidden"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
-          {open ? "✕" : "☰"}
+          {open ? <FiX /> : <FiMenu />}
         </button>
 
-        <ul className="hidden md:flex gap-9 text-sm">
-          <li>Who we are</li>
-          <li>What we do</li>
-          <li>Our Works</li>
-          <li>Industries</li>
-          <li>Careers</li>
-          <li>Insights</li>
-          <li className="mr-30">Contact us</li>
+        <ul className="hidden flex-wrap justify-end gap-x-6 gap-y-3 text-sm md:flex lg:gap-9">
+          {navItems.map((item) => (
+            <li
+              key={item}
+              className="cursor-pointer text-gray-800 transition-colors duration-300 hover:text-blue-700"
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -33,14 +47,15 @@ export default function Navbar() {
           open ? "max-h-96" : "max-h-0"
         }`}
       >
-        <ul className="flex flex-col items-center gap-4">
-          <li>Who we are</li>
-          <li>What we do</li>
-          <li>Our Works</li>
-          <li>Industries</li>
-          <li>Careers</li>
-          <li>Insights</li>
-          <li className="mb-6">Contact us</li>
+        <ul className="flex flex-col items-center gap-4 pb-6 text-sm">
+          {navItems.map((item) => (
+            <li
+              key={item}
+              className="cursor-pointer text-gray-800 transition-colors duration-300 hover:text-blue-700"
+            >
+              {item}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

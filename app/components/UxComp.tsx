@@ -1,12 +1,12 @@
 export default function SpecComp() {
   return (
-    <div className="w-full flex flex-col items-center justify-center py-20 px-6 text-center bg-white">
+    <div className="w-full flex flex-col items-center justify-center py-14 sm:py-20 px-5 sm:px-6 text-center bg-white overflow-hidden">
       {/* Top heading */}
       <h2
         style={{ fontWeight: 300 }}
         className="text-2xl sm:text-3xl md:text-7xl text-gray-900 mb-6"
       >
-        It's All About An Amazing
+        It&apos;s All About An Amazing
       </h2>
 
       {/* Giant UX with image clipping */}
@@ -31,7 +31,7 @@ export default function SpecComp() {
       {/* Description */}
       <p
         style={{ fontWeight: 300 }}
-        className="text-gray-500 text-sm sm:text-base lg:w-200 leading-relaxed mt-10"
+        className="text-gray-500 text-sm sm:text-base w-full max-w-3xl lg:w-200 lg:max-w-none leading-relaxed mt-8 sm:mt-10"
       >
         Our goal is to build lasting brands that connect deeply with your
         audience and stand out across industries. By combining strategy, design,
@@ -42,7 +42,7 @@ export default function SpecComp() {
       {/* Bottom heading */}
       <h2
         style={{ fontWeight: 300 }}
-        className="text-2xl sm:text-3xl md:text-7xl text-gray-900 mb-6 mt-40"
+        className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl text-gray-900 mb-6 mt-16 sm:mt-24 lg:mt-40"
       >
         Enhancing Digital Experiences with <br className="hidden md:block" />
         <span className="lg:mt-4 block">Expert Web Development Company</span>
@@ -50,7 +50,7 @@ export default function SpecComp() {
 
       <p
         style={{ fontWeight: 300 }}
-        className="text-gray-500 text-sm sm:text-base lg:w-300 leading-relaxed mt-10"
+        className="text-gray-500 text-sm sm:text-base w-full max-w-5xl xl:w-300 xl:max-w-none leading-relaxed mt-8 sm:mt-10"
       >
         With the ever-increasing competition in the web development and
         eCommerce sectors today, it can be challenging to find a web development
@@ -60,7 +60,7 @@ export default function SpecComp() {
           web development companies in India
         </span>{" "}
         dedicated to understanding your brand and providing you with the
-        solutions that are tailored to your website's specific priorities, thus
+        solutions that are tailored to your website&apos;s specific priorities, thus
         making your brand stand out from the rest.
       </p>
     </div>
